@@ -30,7 +30,7 @@
           $20/mo. thereafter
         </div>
         <div class="form__container">
-          <form action="#" name="signup__form" id="signup__form">
+          <form action="#" name="signup__form" id="form" method="POST">
             <label for="name__first">
               <input
                 type="text"
@@ -39,6 +39,9 @@
                 placeholder="First Name"
               />
             </label>
+            <div class="error" id="error__fname">
+              First Name cannot be empty
+            </div>
             <label for="name__last">
               <input
                 type="text"
@@ -47,6 +50,8 @@
                 placeholder="Last Name"
               />
             </label>
+            <div class="error" id="error__lname">Last Name cannot be empty</div>
+            <div class="error" id="error__lname"></div>
             <label for="email">
               <input
                 type="email"
@@ -55,9 +60,21 @@
                 placeholder="Email Address"
               />
             </label>
-            <label for="password"></label>
-            <input type="password" id="password name="password"
-            placeholder="Password" />
+            <div class="error" id="error__email">
+              Looks like this is not an email
+            </div>
+            <div class="error" id="error__email"></div>
+            <label for="password">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+              />
+            </label>
+            <div class="error" id="error__password">
+              Password cannot be empty
+            </div>
             <button type="submit">claim your free trial</button>
           </form>
           <p class="form__terms">
